@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>米娜桑的家</title>
+    <link rel="stylesheet" type="text/css" href="../css/Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <script>
+        function doneless_alert() {
+            alert("Doing...間違いなく次回");
+        }
+
+        function check_login() {
+            var username = document.getElementById("username_login").value;
+            if ((username.length < 6)) {
+                alert("Please enter a username longer than 6 characters!")
+                return
+            }
+
+            var password = document.getElementById("password_login").value;
+            if ((password.length < 8)) {
+                alert("Please enter a password longer than 8 characters!")
+            }
+            else {
+                alert("Login Successful!")
+            }
+        }
+
+        function check_register() {
+            var email = document.getElementById("email_register").value;
+            var emailcheck = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if (emailcheck.test(email)) {
+
+            }
+            else {
+                alert("Please enter a correct email!")
+                return
+            }
+
+            var username = document.getElementById("username_register").value;
+            if ((username.length < 6)) {
+                alert("Please enter a username longer than 6 characters!")
+                return
+            }
+
+            var password = document.getElementById("password_register").value;
+            if ((password.length < 8)) {
+                alert("Please enter a password longer than 8 characters!")
+                return
+            }
+
+            var repassword = document.getElementById("repassword_register").value;
+            if ((password !== repassword)) {
+                alert("Please enter a same password!")
+            }
+            else {
+                alert("Register Successful!")
+            }
+        }
+
+        function check_forget_mail() {
+            var email = document.getElementById("email_forget").value;
+            var emailcheck = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if (emailcheck.test(email)) {
+
+            }
+            else {
+                alert("Please enter a correct email!")
+                return
+            }
+
+
+        }
+
+        function check_forget_code() {
+            var code = document.getElementById("code_forget").value;
+            if ((code.length !== 4)) {
+                alert("Please enter a right code!")
+                return
+            }else{
+                alert("Corect code!")
+            }
+        }
+
+        function check_forget_password() {
+            var password = document.getElementById("password_forget").value;
+            if ((password.length < 8)) {
+                alert("Please enter a password longer than 8 characters!")
+                return
+            }
+
+            var repassword = document.getElementById("repassword_forget").value;
+            if ((password !== repassword)) {
+                alert("Please enter a same password!")
+            }
+            else {
+                alert("Reset Successful!")
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <header id="head">
+        <link rel="stylesheet" type="text/css" href="../css/Head.css">
+        <div class="head_box">
+            <ul id="nav">
+                <li><a href="HomePage.html">主站首页</a></li>
+                <li><a href="Master.html">站长介绍</a></li>
+                <li><a href="Login.html">登陆注册</a></li>
+                <li><a href="MyPage.html">个人主页</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="login">
+        <h1>Login</h1>
+        <label for="username">UserName</label><br>
+        <input type="text" placeholder="Enter UserName" id="username_login"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" placeholder="Enter Password" id="password_login"><br><br>
+        <button id="login_button" onclick="check_login()">Login</button><br><br>
+        <button onclick="doneless_alert()">Forget The Password</button>
+    </div>
+    <div id="register">
+        <h1>Register</h1>
+        <label for="email">Email</label><br>
+        <input type="email" id="email_register" placeholder="Enter Email"><br><br>
+        <label for="username">UserName</label><br>
+        <input type="text" id="username_register" placeholder="Enter UserName"><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="password_register" placeholder="Enter Password"><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="repassword_register" placeholder="Repeat Password"><br><br>
+        <button id="login_button" onclick="check_register()">Register</button>
+    </div>
+    <div id="forget">
+        <h1>Forget The Password</h1>
+        <label for="email">Email</label><br>
+        <input type="email" id="email_forget" placeholder="Enter Email">
+        <button id="send_mail" onclick="check_forget_mail()">Send Email</button><br><br>
+        <label for="code">Code</label><br>
+        <input type="text" id="code_forget" placeholder="Enter The Code From Email">
+        <button id="chek_code" onclick="check_forget_code()">Check Code</button><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="password_forget" placeholder="Enter New Password"><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="repassword_forget" placeholder="Repeat New Password"><br><br>
+        <button id="reser_password" onclick="check_forget_password()">Reset Password</button>
+    </div>
+    <div id="destroy">
+        <h1>Destroy Account</h1>
+        <label for="email_destroy">Email</label><br>
+        <input type="email" id="email" placeholder="Enter Email">
+        <button id="send_mail">Send Email</button><br><br>
+        <label for="code">Code</label><br>
+        <input type="text" id="code_destroy" placeholder="Enter The Code From Email">
+        <button id="chek_code">Check Code</button><br><br>
+        <label for="username">UserName</label><br>
+        <input type="text" id="username_destroy" placeholder="Enter UserName"><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="password_destroy" placeholder="Enter Password"><br><br>
+        <label for="repassword">Password</label><br>
+        <input type="password" id="repassword_destroy" placeholder="Repeat Password"><br><br>
+        <button id="destroy_account">Destroy!!!</button>
+    </div>
+</body>
+
+</html>

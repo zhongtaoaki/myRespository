@@ -1,0 +1,50 @@
+body {
+    background-image: url(../media/Working.JPG);
+    background-size: 100%;
+    font-family: 'ZCOOL XiaoWei', serif;
+    /* text-align: center; */
+}
+
+#login {
+    background-color: rgba(248, 248, 248, 0.9);
+    height: 400px;
+    width: 49%;
+    float: left;
+    border: 2px solid;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#register {
+    background-color: rgba(248, 248, 248, 0.9);
+    height: 400px;
+    width: 49%;
+    float: right;
+    border: 2px solid;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#forget {
+    background-color: rgba(248, 248, 248, 0.9);
+    height: 400px;
+    width: 49%;
+    float: left;
+    border: 2px solid;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#destroy{
+    background-color: rgba(248, 248, 248, 0.9);
+    height: 400px;
+    width: 49%;
+    float: right;
+    border: 2px solid;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
